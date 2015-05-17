@@ -1,0 +1,198 @@
+source('~/aa.R')
+replicate(10, rnorm(10))
+cm <- makeCacheMatrix(replicate(10, rnorm(10)))
+cacheSolve(cm)
+cacheSolve(cm)
+sl = c(6.9, 6.7, 6.9, 5.8, 6.8)
+sw = c(3.1, 3.1, 3.1, 2.7, 3.2)
+cor(sl, sw)
+mean(dl)
+mean(sl)
+sl - mean(sl)
+sw - mean(sw)
+(sw - mean(sw))*(sl - mean(sl))
+sum((sw - mean(sw))*(sl - mean(sl)))
+sum((sw - mean(sw))*(sl - mean(sl)))/4
+cov(sl, sw)
+sum((sl - mean(sl))*(sl - mean(sl)))/4
+sum((sw - mean(sw))*(sw - mean(sw)))/4
+sqrt(sum((sl - mean(sl))*(sl - mean(sl)))/4)
+sqrt(sum((sw - mean(sw))*(sw - mean(sw)))/4)
+sqrt(sum((sl - mean(sl))*(sl - mean(sl)))/4) * sqrt(sum((sw - mean(sw))*(sw - mean(sw)))/4)
+cov(sl, sw) / (sqrt(sum((sl - mean(sl))*(sl - mean(sl)))/4) * sqrt(sum((sw - mean(sw))*(sw - mean(sw)))/4))
+4/sqrt(6*7)
+4/(6*7)
+x=c(5.1,4.9,4.7,4.6,5.0)
+y=c(3.5,3.0,3.2,3.1,5.4)
+cor(x,y)
+c = read.csv("getdata-data-ss06hid")
+c = read.csv("getdata-data-ss06hid.csv")
+setwd("C:/Dropbox/Work/RProgrammingAssignments/getdata/quiz1")
+c = read.csv("getdata-data-ss06hid.csv")
+c[c$VAL >= 24]
+c[c$VAL >= 24,]
+c[c$VAL >= 24,c$SERIALNO]
+c[c$VAL >= 24,SERIALNO]
+c[c$VAL >= 24,cSERIALNO][c("SERIALNO")]
+c[c$VAL >= 24][c("SERIALNO")]
+vals = c[c$VAL >= 24]
+vals <- c[c$VAL >= 24]
+vals <- c[c$VAL >= 24,]
+vals[c("SERIALNO")]
+View(c)
+View(vals)
+vals <- c[c$VAL = 24,]
+vals <- c[c$VAL == 24,]
+View(vals)
+rows(vals)
+hist(c$VAL)
+summary(c)
+c2 = read.csv("getdata-data-ss06hid.csv", quote="")
+install.packages('compare')
+library("compare")
+library(compare)
+compare(c, c2)
+c[,c$VAL]
+c[,c("VAL")]
+c[,c("SERIALNO")]
+c[c$VAL==25,c("SERIALNO")]
+c[c$VAL==250,c("SERIALNO")]
+c[c$VAL=="24",c("SERIALNO")]
+c2 = read.csv("getdata-data-ss06hid.csv", quote="", check.names=TRUE)
+c2[c2$VAL,]
+c2[c2$VAL==24,]
+c2[c2$VAL==24,c("SERIALNO")]
+View(c)
+View(c)
+View(c)
+c2 = read.csv("getdata-data-ss06hid.csv", quote="", check.names=TRUE)
+c2[c2$VAL==24,c("SERIALNO")]
+subset(c2, VAL == 24)
+subset(c2, VAL == 24)[,c("SERIALNO")]
+vals <- subset(c2, VAL == 24)
+View(vals)
+subset(c2, VAL == 25)[,c("SERIALNO")]
+subset(c2, VAL == 26)[,c("SERIALNO")]
+subset(c2, VAL == 26)[,c("FES")]
+subset(c2, VAL == 24)[,c("FES")]
+subset(c2, VAL == 23)[,c("FES")]
+subset(c2, VAL == 1)[,c("FES")]
+subset(c2, VAL == 2)[,c("FES")]
+subset(c2, VAL == 15)[,c("FES")]
+library(xlsx)
+install.packages(xlsx)
+install.packages("xlsx")
+library(xlsx)
+library(xlsx)
+system("java -version")
+library(xlsx)
+system("java -version")
+system("cmd /c path")
+system("java -version")
+library(xlsx)
+options(java.home="C:\\Program Files\\Java\\jdk7\\")
+library(rJava)
+options(java.home="C:\\Program Files\\Java\\jdk7\\jre\\")
+library(rJava)
+library(xlsx)
+cd <- read.xlsx("getdata-data-DATA.gov_NGAP.xlsx",colIndex=7:15,rowIndex=18:23)
+cd <- read.xlsx("getdata-data-DATA.gov_NGAP.xlsx",colIndex=7:15,rowIndex=18:23,sheetIndex = 1)
+View(cd)
+sum(dat$Zip*dat$Ext,na.rm=T)
+sum(cd$Zip*cd$Ext,na.rm=T)
+library(XML)
+install.packages("XML")
+library(XML)
+doc <- xmlTreeParse(file = "getdata-data-restaurants.xml")
+root <- xmlRoot(doc)
+root
+rootNode[[1]]
+root[[1]]
+root[[1]][[1]]
+xpathSApply(root[[1]],"//zipcode",xmlValue)
+rows <- root[[1]]
+rows
+xpathSApply(roes,"//zipcode",xmlValue)
+xpathSApply(rows,"//zipcode",xmlValue)
+xmlSApply(rows,xmlValue)
+ros[[1]]
+rows[[1]]
+xpathSApply(rows,"//name",xmlValue)
+doc <- xmlParse("getdata-data-restaurants.xml")
+xpathSApply(xmlRoot(doc)[[1]],"//name",xmlValue)
+xpathSApply(xmlRoot(doc)[[1]],"//zipcode",xmlValue)
+zipcodes <- xpathSApply(xmlRoot(doc)[[1]],"//zipcode",xmlValue)
+zipcodes[zipcodes == "21231"]
+length(zipcodes[zipcodes == "21231"])
+library(data.table)
+DT <- fread(input = "getdata-data-ss06pid.csv")
+View(DT)
+mean(DT$pwgtp15,by=DT$SEX)
+hist(DT$SEX)
+mean(DT[DT$SEX==1,]$pwgtp15); mean(DT[DT$SEX==2,]$pwgtp15)
+DT[,mean(pwgtp15),by=SEX]
+rowMeans(DT)[DT$SEX==1]; rowMeans(DT)[DT$SEX==2]
+sapply(split(DT$pwgtp15,DT$SEX),mean)
+mean(DT$pwgtp15,by=DT$SEX)
+tapply(DT$pwgtp15,DT$SEX,mean)
+system.time(tapply(DT$pwgtp15,DT$SEX,mean))
+DT <- read.csv("getdata-data-ss06pid.csv")
+tapply(DT$pwgtp15,DT$SEX,mean)
+mean(DT$pwgtp15,by=DT$SEX)
+sapply(split(DT$pwgtp15,DT$SEX),mean)
+rowMeans(DT)[DT$SEX==1]; rowMeans(DT)[DT$SEX==2]
+DT[,mean(pwgtp15),by=SEX]
+mean(DT[DT$SEX==1,]$pwgtp15); mean(DT[DT$SEX==2,]$pwgtp15)
+DT <- fread(input = "getdata-data-ss06pid.csv")
+tapply(DT$pwgtp15,DT$SEX,mean)
+mean(DT$pwgtp15,by=DT$SEX)
+sapply(split(DT$pwgtp15,DT$SEX),mean)
+rowMeans(DT)[DT$SEX==1]; rowMeans(DT)[DT$SEX==2]
+DT[,mean(pwgtp15),by=SEX]
+mean(DT[DT$SEX==1,]$pwgtp15); mean(DT[DT$SEX==2,]$pwgtp15)
+install.packages("microbenchmark")
+library(microbenchmark)
+microbenchmark(2)
+DT <- fread(input = "getdata-data-ss06pid.csv")
+microbenchmark(DT[,mean(pwgtp15),by=SEX])
+microbenchmark(DT[,mean(pwgtp15),by=SEX], times=1000L)
+mean(DT[DT$SEX==1,]$pwgtp15); mean(DT[DT$SEX==2,]$pwgtp15)
+mean(DT[DT$SEX==1,]$pwgtp15) + mean(DT[DT$SEX==2,]$pwgtp15)
+microbenchmark(mean(DT[DT$SEX==1,]$pwgtp15) + mean(DT[DT$SEX==2,]$pwgtp15), times=1000)
+microbenchmark(mean(DT[DT$SEX==1,]$pwgtp15) + mean(DT[DT$SEX==2,]$pwgtp15), times=10)
+sapply(split(DT$pwgtp15,DT$SEX),mean)
+microbenchmark(sapply(split(DT$pwgtp15,DT$SEX),mean))
+microbenchmark(sapply(split(DT$pwgtp15,DT$SEX),mean),times = 1000)
+tapply(DT$pwgtp15,DT$SEX,mean)
+microbenchmark(tapply(DT$pwgtp15,DT$SEX,mean))
+library(sqldf)
+sqldf("select pwgtp1 from DT where AGEP < 50")
+sqldf("select distinct AGEP from DT")
+sqldf("select distinct AGEP from DT order by AGEP")
+hist(DT$AGEP)
+lines <- readLines(url("http://biostat.jhsph.edu/~jleek/contact.html"))
+nchar(lines[10])
+nchar(lines[20])
+nchar(lines[30])
+nchar(lines[100])
+lines
+lines <- readLines(url("https://api.github.com/users/jtleek/repos"))
+lines
+install.packages("jsonlite")
+library(jsonlite)
+doc <- fromJSON(txt="https://api.github.com/users/jtleek/repos")
+install.packages('curl')
+doc <- fromJSON(txt="https://api.github.com/users/jtleek/repos")
+doc
+View(doc)
+doc[doc$name == "datasharing",]
+doc[doc$name == "datasharing",c("created_at")]
+doc <- fread("../quiz2/getdata-wksst8110.for")
+doc <- read.fwf("../quiz2/getdata-wksst8110.for", widths = c(-1, 9))
+View(doc)
+doc <- read.fwf("../quiz2/getdata-wksst8110.for", widths = c(-1, 9, -5, 4, -1, 3, -5, 4, -1, 3, -5,4, -1, 3, -5,4, -1, 3))
+View(doc)
+doc <- read.fwf("../quiz2/getdata-wksst8110.for", widths = c(-1, 9, -5, 4, -1, 3, -5, 4, -1, 3, -5,4, -1, 3, -5,4, -1, 3), skip=4)
+View(doc)
+mean(doc$V4)
+sum(doc$V4)
